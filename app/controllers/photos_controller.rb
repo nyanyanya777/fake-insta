@@ -17,6 +17,7 @@ class PhotosController < ApplicationController
   def create
  @photos = Photo.new(photos_params)
  @photos.user_id = current_user.id
+ NoticeMailer.sendmail_photo(@photos).deliver
  if @photos.save
    redirect_to photos_path, notice: "ブログを作成しました！"
  else
