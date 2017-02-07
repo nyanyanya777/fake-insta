@@ -49,3 +49,5 @@ end
 
 gem 'twitter-bootstrap-rails'
 gem 'devise'
+gem 'rails_admin'
+gem 'cancan'
