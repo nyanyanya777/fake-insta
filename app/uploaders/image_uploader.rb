@@ -8,9 +8,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage :file
   # storage :fog
 
-    # 1200x900にリサイズします
-    process resize_to_limit: [10, 10]
-
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
