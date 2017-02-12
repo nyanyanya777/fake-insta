@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170209030439) do
     t.datetime "updated_at", null: false
     t.integer  "user_id"
     t.string   "name"
-    t.string   "image"
+    t.image_tag   "image"
   end
 
   create_table "users", force: :cascade do |t|
