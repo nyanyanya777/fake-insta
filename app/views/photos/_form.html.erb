@@ -1,5 +1,6 @@
-
-<%= form_for(@photos, url: choose_new_or_edit) do |f| %>
+<p id="notice"><%= notice %>
+<%= form_for(@photos) do |f| %>
+<%= f.error_messages! %>
 <%= f.label :タイトル %>
 <%= f.text_field :title, class: 'form-control'%>
 <div class="field">
@@ -7,6 +8,8 @@
 <div class = form>
 <%= f.label :内容 %>
 <%= f.text_field :content, class: 'form-control' %>
+<%=f.label :image,"ユーザー画像" %>
+<%= f.file_field :image %>
 </div>
 </div>
 <br>
