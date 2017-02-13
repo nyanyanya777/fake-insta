@@ -1,5 +1,15 @@
 <%= form_for(@photos) do |f| %>
-<%= f.error_messages! %>
+<% if @photos.errors.any? %>
+  <div id="error_explanation">
+  <h2><%= @photos.errors.count %>件のエラーがあります。</h2>
+
+  <ul>
+  <% @photos.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+  <% end %>
+  </ul>
+  </div>
+  <% end %>
 <%= f.label :タイトル %>
 <%= f.text_field :title, class: 'form-control'%>
 <div class="field">

@@ -1,11 +1,11 @@
 ja:
   activerecord:
     models:
-      blog: "ブログ"
+      photo: "写真"
       contact: "お問い合わせ"
       user: "ユーザー"
     attributes:
-      blog:
+      photo:
         title: "タイトル"
         content: "内容"
       contact:
